@@ -32,7 +32,7 @@
                 <%= f.hidden_field :id, value: item.dig(:product)&.id, class: "cart_product_id" %>
               </td>
             <% end %>
-            <td data-th="subtotal" class="text-center" id="item-product-allprice_<%= item[:product].id %>"><%= number_to_currency_format line_total_price_1(item[:product].id) %></td>
+            <td data-th="subtotal" class="text-center" id="item-product-allprice_<%= item[:product].id %>"><%= number_to_currency_format line_total_price(item) %></td>
             <td class="actions">
               <%= link_to remove_from_carts_path(item[:product]), class: "btn btn-warning btn-block", remote: true do %>
                 <%= t "pages.remove" %>

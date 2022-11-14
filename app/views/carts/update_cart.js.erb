@@ -1,6 +1,6 @@
 $("#cart-total-money").html(
   "<%= t "pages.total_of_money" %> <%= number_to_currency_format total_of_money %>"
 );
-$("#item-product-allprice_<%= item[:product].id %>").html(
+$("#item-product-allprice_<%= @item[:product_id] %>").html(
   "<%= number_to_currency_format line_total_price_1(@item) %>"
 );

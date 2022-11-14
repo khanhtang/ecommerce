@@ -29,8 +29,8 @@ module CartsHelper
     item[:product].price * item[:quantity]
   end
 
-  def line_total_price_1 id
-    product = Product.find_by(id: id)
+  def line_total_price_1 item
+    product = Product.find_by(id: item[:product_id])
     product.price * item[:quantity]
   end
 
