@@ -26,16 +26,16 @@
           <tr>
             <td class="left_align"><a href="app-models-category_rb.html">app/models/category.rb</a></td>
             <td class='right_align'><tt>10</tt></td>
-            <td class='right_align'><tt>7</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+            <td class='right_align'><tt>8</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>20.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:100px"></div>
-        <div class="uncovered" style="width:0px"></div>
+        <div class="covered" style="width:20px"></div>
+        <div class="uncovered" style="width:80px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>0.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:100px"></div>
-        <div class="uncovered" style="width:0px"></div>
+        <div class="covered" style="width:0px"></div>
+        <div class="uncovered" style="width:100px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -50,40 +50,40 @@
 
     <table class="details">
       <tbody>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line2">2</a> class Category &lt; ApplicationRecord</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line3">3</a>   has_many :products, dependent: :destroy</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line4">4</a>   belongs_to :parent, class_name: Category.name, optional: true</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line5">5</a>   has_many :childrens, class_name: Category.name, foreign_key: :parent_id, dependent: :destroy</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line6">6</a> </pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line7">7</a>   scope :by_category, -&gt;{where parent_id: nil}</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line8">8</a>   scope :by_brand, -&gt;{where.not(parent_id: nil)}</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line9">9</a> </pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line10">10</a>   validates :name, presence: true</pre></td>
         </tr>
-        <tr class="inferred">
+        <tr class="uncovered">
           <td><pre><a name="line11">11</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2022-11-16 15:45:21 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
+    <p>Generated on 2022-11-17 11:15:17 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
 
   </body>
 </html>
