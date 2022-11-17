@@ -27,15 +27,15 @@
             <td class="left_align"><a href="app-models-order_detail_rb.html">app/models/order_detail.rb</a></td>
             <td class='right_align'><tt>34</tt></td>
             <td class='right_align'><tt>18</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>79.41%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>97.06%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:79px"></div>
-        <div class="uncovered" style="width:21px"></div>
+        <div class="covered" style="width:97px"></div>
+        <div class="uncovered" style="width:3px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>61.11%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>94.44%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:61px"></div>
-        <div class="uncovered" style="width:39px"></div>
+        <div class="covered" style="width:94px"></div>
+        <div class="uncovered" style="width:6px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -74,7 +74,7 @@
         <tr class="marked">
           <td><pre><a name="line9">9</a>   scope :this_week, (lambda do</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line10">10</a>     where(created_at:</pre></td>
         </tr>
         <tr class="inferred">
@@ -89,7 +89,7 @@
         <tr class="marked">
           <td><pre><a name="line14">14</a>   def unit_price</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line15">15</a>     if persisted?</pre></td>
         </tr>
         <tr class="uncovered">
@@ -98,7 +98,7 @@
         <tr class="inferred">
           <td><pre><a name="line17">17</a>     else</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line18">18</a>       product.price</pre></td>
         </tr>
         <tr class="inferred">
@@ -113,7 +113,7 @@
         <tr class="marked">
           <td><pre><a name="line22">22</a>   def total_price</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line23">23</a>     unit_price * quantity</pre></td>
         </tr>
         <tr class="inferred">
@@ -131,7 +131,7 @@
         <tr class="marked">
           <td><pre><a name="line28">28</a>   def set_total_price</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line29">29</a>     self[:price] = total_price</pre></td>
         </tr>
         <tr class="inferred">
@@ -143,7 +143,7 @@
         <tr class="marked">
           <td><pre><a name="line32">32</a>   def change_product_quantity</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line33">33</a>     product.update(residual: product.residual - quantity)</pre></td>
         </tr>
         <tr class="inferred">
@@ -155,7 +155,7 @@
       </tbody>
     </table>
 
-    <p>Generated on 2022-11-17 11:15:17 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
+    <p>Generated on 2022-11-17 15:42:39 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
 
   </body>
 </html>

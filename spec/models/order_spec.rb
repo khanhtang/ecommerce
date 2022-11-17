@@ -30,13 +30,13 @@ RSpec.describe Order, type: :model do
   
       it "should find to orders" do
         keyword = "a"
-        order_user = Order.search keyword
+        order_user = Order.joins(:user).search keyword
         expect(order_user).to eq [order_1, order_2]
       end
   
       it "should not find to orders" do
         keyword = "o"
-        order_user = Order.search keyword
+        order_user = Order.joins(:user).search keyword
         expect(order_user).to eq []
       end
     end
