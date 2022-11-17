@@ -7,6 +7,39 @@
     </div>
     <div class="container-fluid">
       <div class="row">
+        <div class="col-xl-6">
+          <div class="card mb-4">
+            <div class="card-header">
+              <i class="fas fa-chart-bar me-1"></i>
+              <%= t "chartkick.product_category" %>
+            </div>
+            <div class="card-body">
+              <%= bar_chart bar_chart_product(@products) %>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card mb-4">
+            <div class="card-header">
+              <i class="fas fa-chart-pie me-1"></i>
+              <%= t "chartkick.order_user" %>
+            </div>
+            <div class="card-body">
+              <%= pie_chart pie_chart_order(@orders) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-4">
+        <div class="card-header">
+          <i class="fas fa-table me-1"></i>
+          <%= t "chartkick.product_purchase_count" %>
+        </div>
+        <div class="card-body">
+          <%= column_chart product_purchase_count(@order_details)%>
+        </div>
+      </div>
+      <div class="row">
         <h3><%= t "chartkick.money_month" %></h3>
         <%= line_chart admin_order_total_money_month_path, thousands: ",", suffix: " vnđ" %>
       </div>

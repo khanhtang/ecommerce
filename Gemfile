@@ -42,6 +42,9 @@ gem "groupdate"
 gem "figaro"
 gem "whenever", require: false
 gem "axlsx_rails"
+gem "database_cleaner"
+gem "simplecov"
+gem "simplecov-rcov"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -66,6 +69,9 @@ group :test do
   gem "selenium-webdriver", ">= 4.0.0.rc1"
   # Easy installation and use of web drivers to run system tests with browsers
   gem "webdrivers"
+  gem "database_cleaner"
+  gem "factory_bot_rails"
+  gem "shoulda-matchers", "~> 5.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

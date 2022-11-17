@@ -1,5 +1,8 @@
 class Admin::StaticPagesController < Admin::BaseController
   def index
+    @products = Product.group(:category_id).count
+    @orders = Order.this_week.group(:user_id).count
+    @order_details = OrderDetail.this_week.group(:product_id).count
   end
 
   def order_status
