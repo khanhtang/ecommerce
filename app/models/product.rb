@@ -3,8 +3,9 @@ class Product < ApplicationRecord
   has_many :rates, dependent: :destroy
   has_many :order_details, dependent: :destroy
   accepts_nested_attributes_for :category, allow_destroy: true
-  enum sort: {oldest: 0, newest: 1, price: 2, default: 3}
   has_one_attached :image
+  
+  enum sort: {oldest: 0, newest: 1, price: 2, default: 3}
 
   scope :product_order, ->(field){order field}
   scope :search, ->(keywrd){where("products.name LIKE ? or products.description LIKE ?", "%#{keywrd}%", "%#{keywrd}%")}
