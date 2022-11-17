@@ -50,7 +50,7 @@ end
   price = 200000
   residual = 100
   description = Faker::Lorem.sentence(word_count: 3, supplemental: true, random_words_to_add: 4)
-  category_id = 1
+  category_id = rand(1..5)
   Product.create!(
     name: name,
     price: price,
