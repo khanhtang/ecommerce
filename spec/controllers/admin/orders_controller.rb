@@ -95,5 +95,18 @@ RSpec.describe Admin::OrdersController, type: :controller do
 
     it_behaves_like "shared status failed", 0, 0, I18n.t("orders.pending_failed")
     it_behaves_like "shared status failed", 0, 2, I18n.t("orders.cancel_failed")
+
+    context "when update status accept" do
+      let!(:order) {FactoryBot.create(:order, status: 0)}
+      let!(:product) {FactoryBot.create(:product, residual: 20)}
+      let!(:order_detail) {FactoryBot.create(:order_detail, product: product, order: order, quantity: 10)}
+      after do
+        put :update, params: {id: order.id, status: 1} 
+      end
+
+      it "check residual product when update status accept" do
+        expect(product.residual).to eq (10)
+      end
+    end
   end
 end

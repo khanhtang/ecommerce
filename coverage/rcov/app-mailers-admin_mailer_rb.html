@@ -26,16 +26,16 @@
           <tr>
             <td class="left_align"><a href="app-mailers-admin_mailer_rb.html">app/mailers/admin_mailer.rb</a></td>
             <td class='right_align'><tt>15</tt></td>
-            <td class='right_align'><tt>8</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>46.67%</tt></div>
+            <td class='right_align'><tt>6</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:47px"></div>
-        <div class="uncovered" style="width:53px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>0.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:0px"></div>
-        <div class="uncovered" style="width:100px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -50,7 +50,7 @@
 
     <table class="details">
       <tbody>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line2">2</a> class AdminMailer &lt; ApplicationMailer</pre></td>
         </tr>
         <tr class="inferred">
@@ -71,34 +71,34 @@
         <tr class="inferred">
           <td><pre><a name="line8">8</a>   #</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line9">9</a>   def week_summary</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line10">10</a>     @greeting = &quot;Hi&quot;</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line11">11</a>     @orders = Order.this_week.group(:user_id).includes(:users).count</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line12">12</a>     @order_details = OrderDetail.this_week.group(:product_id).includes(:products).count</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line13">13</a> </pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line14">14</a>     mail to: &quot;a2suisei0@gmail.com&quot;, subject: t(&quot;admin.week_summary&quot;)</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="inferred">
           <td><pre><a name="line15">15</a>   end</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="inferred">
           <td><pre><a name="line16">16</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2022-11-18 11:48:46 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
+    <p>Generated on 2022-11-18 14:34:25 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
 
   </body>
 </html>

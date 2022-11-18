@@ -28,7 +28,7 @@ end
 
 RSpec.shared_examples "shared status success" do |current_status, change_status, status_name|
   context "when status #{status_name} change success" do
-    let(:order){FactoryBot.create(:order, status: current_status)}
+    let(:order) {FactoryBot.create(:order, status: current_status)}
     before do
       put :update, params: {id: order.id, status: change_status}
     end
