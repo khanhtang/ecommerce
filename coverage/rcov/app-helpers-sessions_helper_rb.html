@@ -27,15 +27,15 @@
             <td class="left_align"><a href="app-helpers-sessions_helper_rb.html">app/helpers/sessions_helper.rb</a></td>
             <td class='right_align'><tt>43</tt></td>
             <td class='right_align'><tt>27</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>55.81%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>69.77%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:56px"></div>
-        <div class="uncovered" style="width:44px"></div>
+        <div class="covered" style="width:70px"></div>
+        <div class="uncovered" style="width:30px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>29.63%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>51.85%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:30px"></div>
-        <div class="uncovered" style="width:70px"></div>
+        <div class="covered" style="width:52px"></div>
+        <div class="uncovered" style="width:48px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -56,7 +56,7 @@
         <tr class="marked">
           <td><pre><a name="line3">3</a>   def log_in user</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line4">4</a>     session[:user_id] = user.id</pre></td>
         </tr>
         <tr class="inferred">
@@ -68,13 +68,13 @@
         <tr class="marked">
           <td><pre><a name="line7">7</a>   def current_user</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line8">8</a>     if (user_id = session[:user_id])</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line9">9</a>       @current_user ||= User.find_by id: user_id</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line10">10</a>     elsif (user_id = cookies.signed[:user_id])</pre></td>
         </tr>
         <tr class="uncovered">
@@ -104,7 +104,7 @@
         <tr class="marked">
           <td><pre><a name="line19">19</a>   def logged_in?</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line20">20</a>     current_user.present?</pre></td>
         </tr>
         <tr class="inferred">
@@ -116,7 +116,7 @@
         <tr class="marked">
           <td><pre><a name="line23">23</a>   def is_admin?</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line24">24</a>     current_user&amp;.admin?</pre></td>
         </tr>
         <tr class="inferred">
@@ -182,7 +182,7 @@
       </tbody>
     </table>
 
-    <p>Generated on 2022-11-17 15:42:39 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
+    <p>Generated on 2022-11-18 11:48:46 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
 
   </body>
 </html>

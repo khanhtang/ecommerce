@@ -26,16 +26,16 @@
           <tr>
             <td class="left_align"><a href="app-controllers-admin-base_controller_rb.html">app/controllers/admin/base_controller.rb</a></td>
             <td class='right_align'><tt>20</tt></td>
-            <td class='right_align'><tt>16</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>20.00%</tt></div>
+            <td class='right_align'><tt>13</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>90.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:20px"></div>
-        <div class="uncovered" style="width:80px"></div>
+        <div class="covered" style="width:90px"></div>
+        <div class="uncovered" style="width:10px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>0.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>84.62%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:0px"></div>
-        <div class="uncovered" style="width:100px"></div>
+        <div class="covered" style="width:85px"></div>
+        <div class="uncovered" style="width:15px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -50,49 +50,49 @@
 
     <table class="details">
       <tbody>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line2">2</a> class Admin::BaseController &lt; ApplicationController</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line3">3</a>   layout &quot;admin/layouts/application&quot;</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line4">4</a>   before_action :logged_in_user</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line5">5</a>   before_action :check_user_is_admin</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line6">6</a>   include SessionsHelper</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line7">7</a>   </pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line8">8</a>   def logged_in_user</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line9">9</a>     return if logged_in?</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line10">10</a>   </pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line11">11</a>     flash[:danger] = t &quot;sessions.login_please&quot;</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line12">12</a>     redirect_to login_url</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="inferred">
           <td><pre><a name="line13">13</a>   end</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line14">14</a>   </pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line15">15</a>   def check_user_is_admin</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line16">16</a>     return if is_admin?</pre></td>
         </tr>
         <tr class="inferred">
@@ -104,16 +104,16 @@
         <tr class="uncovered">
           <td><pre><a name="line19">19</a>     redirect_to root_url</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="inferred">
           <td><pre><a name="line20">20</a>   end</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="inferred">
           <td><pre><a name="line21">21</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2022-11-17 15:42:39 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
+    <p>Generated on 2022-11-18 11:48:46 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
 
   </body>
 </html>

@@ -26,16 +26,16 @@
           <tr>
             <td class="left_align"><a href="app-models-order_rb.html">app/models/order.rb</a></td>
             <td class='right_align'><tt>23</tt></td>
-            <td class='right_align'><tt>14</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>91.30%</tt></div>
+            <td class='right_align'><tt>20</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>13.04%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:91px"></div>
-        <div class="uncovered" style="width:9px"></div>
+        <div class="covered" style="width:13px"></div>
+        <div class="uncovered" style="width:87px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>85.71%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>0.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:86px"></div>
-        <div class="uncovered" style="width:14px"></div>
+        <div class="covered" style="width:0px"></div>
+        <div class="uncovered" style="width:100px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -50,79 +50,79 @@
 
     <table class="details">
       <tbody>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line2">2</a> class Order &lt; ApplicationRecord</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line3">3</a>   has_many :order_details, dependent: :destroy</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line4">4</a>   belongs_to :user</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line5">5</a>   has_many :products, through: :order_details</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line6">6</a> </pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line7">7</a>   enum status: {pending: 0, accept: 1, cancel: 2, reject_: 3}</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line8">8</a>   enum sort: {oldest: 0, newest: 1, status: 2, default: 3}</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line9">9</a> </pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line10">10</a>   scope :order_oldest, -&gt;{order :updated_at}</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line11">11</a>   scope :order_newest, -&gt;{order updated_at: :desc}</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line12">12</a>   scope :order_status, -&gt;{order :status}</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line13">13</a>   scope :this_week, (lambda do</pre></td>
         </tr>
         <tr class="uncovered">
           <td><pre><a name="line14">14</a>     where(created_at:</pre></td>
         </tr>
-        <tr class="inferred">
+        <tr class="uncovered">
           <td><pre><a name="line15">15</a>       DateTime.now.beginning_of_week..DateTime.now.end_of_week)</pre></td>
         </tr>
-        <tr class="inferred">
+        <tr class="uncovered">
           <td><pre><a name="line16">16</a>   end)</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line17">17</a> </pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line18">18</a>   class &lt;&lt; self</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line19">19</a>     def search keyword</pre></td>
         </tr>
         <tr class="uncovered">
           <td><pre><a name="line20">20</a>       joins(:user)</pre></td>
         </tr>
-        <tr class="inferred">
+        <tr class="uncovered">
           <td><pre><a name="line21">21</a>         .where(&quot;users.name LIKE ? or users.address LIKE ?&quot;, &quot;%#{keyword}%&quot;, &quot;%#{keyword}%&quot;)</pre></td>
         </tr>
-        <tr class="inferred">
+        <tr class="uncovered">
           <td><pre><a name="line22">22</a>     end</pre></td>
         </tr>
-        <tr class="inferred">
+        <tr class="uncovered">
           <td><pre><a name="line23">23</a>   end</pre></td>
         </tr>
-        <tr class="inferred">
+        <tr class="uncovered">
           <td><pre><a name="line24">24</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2022-11-17 15:42:39 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
+    <p>Generated on 2022-11-18 11:48:46 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.3.1</a></p>
 
   </body>
 </html>
