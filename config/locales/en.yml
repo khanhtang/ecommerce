@@ -137,3 +137,6 @@ en:
     order_month: "Order by month"
     order_quarter: "Order by quarter"
     order_year: "Order by year"
+    product_category: "Product by category"
+    order_user: "Order by user"
+    product_purchase_count: "Product purchase count"

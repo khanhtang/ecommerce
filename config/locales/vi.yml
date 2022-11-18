@@ -137,3 +137,6 @@ vi:
     order_month: "Hóa đơn đã duyệt theo tháng"
     order_quarter: "Hóa đơn đã duyệt theo quý"
     order_year: "Hóa đơn đã duyệt theo năm"
+    product_category: "Sản phẩm theo danh mục"
+    order_user: "Đặt hàng theo người dùng"
+    product_purchase_count: "Số lần mua sản phẩm"
